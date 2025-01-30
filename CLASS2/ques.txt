@@ -1,0 +1,4 @@
+1. Maximum of 2 nos.
+2. percentage and grade of a student
+3. vowel or consonant
+4. arithmetic calculation on operands
