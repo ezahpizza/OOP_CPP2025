@@ -1,4 +1,7 @@
 .dist/
 .vscode/
 *.exe
+<<<<<<< HEAD
+=======
 *.out
+>>>>>>> 6fb1c50219d131b220cb12c5e794b1b954f803b9
