@@ -29,7 +29,7 @@ int main() {
     Complex c1(1.0f, 2.0f);
     Complex c2(1.0f, 3.0f);
 
-    Complex result = c1.addComplex(c1, c2);
+    Complex result = Complex::addComplex(c1, c2);
     result.display();
 
     return 0;

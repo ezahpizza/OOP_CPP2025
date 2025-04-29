@@ -55,7 +55,6 @@ public:
 };
 
 int main () {
-    cout << "== Testing String Class ==" << endl;
 
     String s1; 
     String s2("Well done!"); 
