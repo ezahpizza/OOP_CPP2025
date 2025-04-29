@@ -7,7 +7,7 @@ class DM;
 class DB {
 private:
     int feet;
-    float inches;
+    int inches;
 
 public:
     void getdata() {
@@ -16,8 +16,8 @@ public:
         cout << "Enter inches: ";
         cin >> inches;
         
-        while (inches >= 12.0) {
-            inches -= 12.0;
+        while (inches >= 12) {
+            inches -= 12;
             feet++;
         }
     }
@@ -33,7 +33,7 @@ public:
 class DM {
 private:
     int metres;
-    float centimetres;
+    int centimetres;
 
 public:
     void getdata() {
@@ -43,8 +43,8 @@ public:
         cin >> centimetres;
         
         // Normalize the values
-        while (centimetres >= 100.0) {
-            centimetres -= 100.0;
+        while (centimetres >= 100) {
+            centimetres -= 100;
             metres++;
         }
     }
@@ -59,20 +59,20 @@ public:
 
 DM addDistance(DM d1, DB d2) {
     DM result;
-    float totalCm = d1.metres * 100 + d1.centimetres + d2.feet * 30.48 + d2.inches * 2.54;
+    int totalCm = d1.metres * 100 + d1.centimetres + d2.feet * 30.48 + d2.inches * 2.54;
     
-    result.metres = static_cast<int>(totalCm / 100);
-    result.centimetres = totalCm - result.metres * 100;
+    result.metres = totalCm / 100;
+    result.centimetres = totalCm % 100;
     
     return result;
 }
 
 DB addDistance(DB d1, DM d2) {
     DB result;
-    float totalInches = d1.feet * 12 + d1.inches + d2.metres * 39.3701 + d2.centimetres * 0.393701;
+    int totalInches = d1.feet * 12 + d1.inches + d2.metres * 39.3701 + d2.centimetres * 0.393701;
     
-    result.feet = static_cast<int>(totalInches / 12);
-    result.inches = totalInches - result.feet * 12;
+    result.feet = totalInches / 12;
+    result.inches = totalInches % 12;
     
     return result;
 }
