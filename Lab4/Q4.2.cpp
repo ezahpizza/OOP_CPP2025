@@ -1,6 +1,6 @@
 #include <iostream>
 
-using namespace std;
+using namespace
 
 class Counter {
 private:
@@ -16,7 +16,6 @@ public:
     int getValue() const {
         return count;
     }
-
 
     Counter& operator++() {
         ++count;
