@@ -1,5 +1,7 @@
 #include <iostream>
 
+using namespace std;
+
 class FLOAT {
 private:
     float value;
@@ -40,7 +42,7 @@ public:
     FLOAT operator/(const FLOAT& other) const {
         // Check for division by zero
         if (other.value == 0.0f) {
-            std::cerr << "Error: Division by zero!" << std::endl;
+            cerr << "Error: Division by zero!" << endl;
             return FLOAT(0.0f); // Return 0 or could throw an exception
         }
         return FLOAT(value / other.value);
@@ -48,12 +50,12 @@ public:
 
     // Display method
     void display() const {
-        std::cout << value;
+        cout << value;
     }
 };
 
 // Overload << operator for easy output
-std::ostream& operator<<(std::ostream& os, const FLOAT& f) {
+ostream& operator<<(ostream& os, const FLOAT& f) {
     os << f.getValue();
     return os;
 }
@@ -65,35 +67,35 @@ int main() {
     FLOAT result;
 
     // Display initial values
-    std::cout << "f1 = " << f1 << std::endl;
-    std::cout << "f2 = " << f2 << std::endl;
+    cout << "f1 = " << f1 << endl;
+    cout << "f2 = " << f2 << endl;
 
     // Addition
     result = f1 + f2;
-    std::cout << "f1 + f2 = " << result << std::endl;
+    cout << "f1 + f2 = " << result << endl;
 
     // Subtraction
     result = f1 - f2;
-    std::cout << "f1 - f2 = " << result << std::endl;
+    cout << "f1 - f2 = " << result << endl;
 
     // Multiplication
     result = f1 * f2;
-    std::cout << "f1 * f2 = " << result << std::endl;
+    cout << "f1 * f2 = " << result << endl;
 
     // Division
     result = f1 / f2;
-    std::cout << "f1 / f2 = " << result << std::endl;
+    cout << "f1 / f2 = " << result << endl;
 
     // Test division by zero
     FLOAT f3(0.0);
-    std::cout << "\nTesting division by zero:" << std::endl;
+    cout << "\nTesting division by zero:" << endl;
     result = f1 / f3;
-    std::cout << "f1 / 0 = " << result << std::endl;
+    cout << "f1 / 0 = " << result << endl;
 
     // Chaining operations
-    std::cout << "\nChaining operations:" << std::endl;
+    cout << "\nChaining operations:" << endl;
     result = f1 + f2 * f1 - f2 / f1;
-    std::cout << "f1 + f2 * f1 - f2 / f1 = " << result << std::endl;
+    cout << "f1 + f2 * f1 - f2 / f1 = " << result << endl;
 
     return 0;
 }
