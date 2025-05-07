@@ -73,8 +73,6 @@ int main () {
     s1 = s2; 
     cout << "s1 after assignment from s2: ";
     s1.display();
-
-    cout << "===========================\n" << endl;
     
     return 0;
 }

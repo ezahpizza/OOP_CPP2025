@@ -53,8 +53,6 @@ int main() {
     if (!found) {
         cout << "Book not available in inventory." << endl;
     }
-
-    cout << "=====================\n";
     
     return 0;
 }
