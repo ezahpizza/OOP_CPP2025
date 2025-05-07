@@ -27,7 +27,7 @@ public:
         double y_result = y1 + y2;
 
         double r_result = sqrt(x_result * x_result + y_result * y_result);
-        double a_result = atan2(y_result, x_result); // Using atan2 to handle all quadrants
+        double a_result = atan2(y_result, x_result); 
 
         return Polar(r_result, a_result);
     }
@@ -48,19 +48,14 @@ int main() {
     cout << "Second point: ";
     p2.display();
 
-    // Add the two points
     Polar p3 = p1 + p2;
 
     cout << "Sum: ";
     p3.display();
 
-    // Verify the result by comparing with rectangular coordinates
-    cout << "\nVerification:" << endl;
     cout << "P1(x,y): (" << p1.getX() << ", " << p1.getY() << ")" << endl;
     cout << "P2(x,y): (" << p2.getX() << ", " << p2.getY() << ")" << endl;
     cout << "P3(x,y): (" << p3.getX() << ", " << p3.getY() << ")" << endl;
-    cout << "P1(x,y) + P2(x,y): (" << p1.getX() + p2.getX() << ", " 
-              << p1.getY() + p2.getY() << ")" << endl;
 
     return 0;
 }
