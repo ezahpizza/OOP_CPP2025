@@ -31,7 +31,7 @@ class tri:public shape {
 };
 
 int main() {
-	shape *ptr;
+	shape *ptr;1
 	rec r1;
 	tri t1;
 
