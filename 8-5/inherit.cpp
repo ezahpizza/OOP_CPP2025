@@ -2,7 +2,7 @@
 using namespace std;
 
 class person {
-    public:
+public:
     char name[100];
     int code;
     void input() {
@@ -18,7 +18,7 @@ class person {
 };
  
 class account:virtual public person {
-    public:
+public:
     float pay;
     void getpay() {
         cout<<endl<<"Enter the pay : ";
@@ -31,7 +31,7 @@ class account:virtual public person {
 };
  
 class admin:virtual public person {
-    public:
+public:
     int experience;
     void getexp() {
         cout<<endl<<"Enter the experience : ";
@@ -43,7 +43,7 @@ class admin:virtual public person {
 };
 
 class master:public account,public admin {
-    public:
+public:
     char n[100];
     void gettotal() {
         cout<<endl<<"Enter the company name : ";
