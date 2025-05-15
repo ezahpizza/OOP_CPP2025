@@ -4,92 +4,92 @@
 using namespace std;
 
 class Staff {
-    public:
-        int code;
-        char name[100];
-        
-        void set_info (char *n, int c) {
-            strcpy(name, n);
-            code = c;
-        }
+public:
+    int code;
+    char name[100];
+    
+    void set_info (char *n, int c) {
+        strcpy(name, n);
+        code = c;
+    }
 };
 
 class Teacher : public Staff {
-    protected:
-        char sub[100], publication[100];
-    
-    public:
-        void set_details (char *s, char *p) {
-            strcpy(sub, s);
-            strcpy(publication, p);
-        }
+protected:
+    char sub[100], publication[100];
 
-        void show() {
-            cout << "Name: " << name << endl;
-            cout << "Code: " << code << endl;
-            cout << "Subject: " << sub << endl;
-            cout << "Publication: " << publication << endl;
-        }
+public:
+    void set_details (char *s, char *p) {
+        strcpy(sub, s);
+        strcpy(publication, p);
+    }
+
+    void show() {
+        cout << "Name: " << name << endl;
+        cout << "Code: " << code << endl;
+        cout << "Subject: " << sub << endl;
+        cout << "Publication: " << publication << endl;
+    }
 };
 
 class Officer : public Staff {
-    protected:
-        char grade[100];
-    
-    public:
-        void set_details (char *g) {
-            strcpy(grade, g);
-        }
+protected:
+    char grade[100];
 
-        void show() {
-            cout << "Name: " << name << endl;
-            cout << "Code: " << code << endl;
-            cout << "Grade: " << grade << endl;
-        }
+public:
+    void set_details (char *g) {
+        strcpy(grade, g);
+    }
+
+    void show() {
+        cout << "Name: " << name << endl;
+        cout << "Code: " << code << endl;
+        cout << "Grade: " << grade << endl;
+    }
 };
 
 class Typist : public Staff {
-    protected:
-        float speed;
-    
-    public:
-        void set_speed (float s) {
-            speed = s;
-        }
+protected:
+    float speed;
+
+public:
+    void set_speed (float s) {
+        speed = s;
+    }
 };
 
 class Regular : public Typist {
-    protected:
-        float wage;
-    
-    public:
-        void set_wage(float w) {
-            wage = w;
-        }
+protected:
+    float wage;
 
-        void show() {
-            cout << "Name: " << name << endl;
-            cout << "Code: " << code << endl;
-            cout << "Speed: " << speed << endl;
-            cout << "Wage: " << wage << endl;
-        }
+public:
+    void set_wage(float w) {
+        wage = w;
+    }
+
+    void show() {
+        cout << "Name: " << name << endl;
+        cout << "Code: " << code << endl;
+        cout << "Speed: " << speed << endl;
+        cout << "Wage: " << wage << endl;
+    }
 };
 
 class Casual : public Typist {
-    protected:
-        float wage;
-    
-    public:
-        void set_wage(float w) {
-            wage = w;
-        }
+protected:
+    float wage;
 
-        void show() {
-            cout << "Name: " << name << endl;
-            cout << "Code: " << code << endl;
-            cout << "Speed: " << speed << endl;
-            cout << "Wage: " << wage << endl;
-        }
+public:
+    void set_wage(float w) {
+        wage = w;
+    }
+
+    void show() {
+        cout << "Name: " << name << endl;
+        cout << "Code: " << code << endl;
+        cout << "Speed: " << speed << endl;
+        cout << "Wage: " << wage << endl;
+    }
 };
 
 int main() {

@@ -9,15 +9,15 @@ class items {
     float itemPrice[m];
     int count;
 
-    public:
-        void CNT() {
-            count = 0;
-        }
-        void getitem();
-        void display();
-        void displaysum();
-        void remove();
-        void displayItems();
+public:
+    void CNT() {
+        count = 0;
+    }
+    void getitem();
+    void display();
+    void displaysum();
+    void remove();
+    void displayItems();
 };
 void items :: getitem() {
     cout<<"Enter item code :";
