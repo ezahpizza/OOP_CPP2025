@@ -17,7 +17,6 @@ public:
         return count;
     }
 
-
     Counter& operator++() {
         ++count;
         return *this;
